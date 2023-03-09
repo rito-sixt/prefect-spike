@@ -1,0 +1,49 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-flow'
+###
+name: log-simple
+description: null
+version: ac7b02ec457936db35157cdd476ed9a4
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  name: Rito
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 1220d2e4-66f1-4182-b239-5419753fd17d
+  _block_document_name: anonymous-5e980392-4a9f-4dab-a65f-13a3d2a156df
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /Users/ritabratamoitra/Projects/Sixt/spikes/prefect/flows
+entrypoint: sample_deployment.py:log_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    flow_name:
+      title: flow_name
+      position: 0
+      type: string
+  required:
+  - flow_name
+  definitions: null
+timestamp: '2023-03-08T17:39:57.856370+00:00'
