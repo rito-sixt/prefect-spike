@@ -14,7 +14,7 @@
 
 1. Implement a flow. Example - `sample_deployment_flow`
 2. Build the config yaml
-   - `prefect deployment build sample_deployment.py:log_flow -n log-simple -q test`
+   - `prefect deployment build sample_deployment.py:log_flow -n log-simple -q test`. This generates `log_flow-deployment.yaml`
 3. Apply the deployment - `prefect deployment apply log_flow-deployment.yaml`
 4. Trigger a run - `prefect deployment run 'log-flow/log-simple'` ( This keeps the
    execution in queue, until agent of type `test` is triggered )
