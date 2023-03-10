@@ -1,0 +1,59 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-flow'
+###
+name: log-flow-docker
+description: null
+version: ac7b02ec457936db35157cdd476ed9a4
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  flow_name: Rito
+schedule: null
+is_schedule_active: true
+infra_overrides:
+  image: sha256:58030009b9d06769f9498e7352eb285779588ebcb683d2fab46d422d24ca6c8a
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-flow
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  image: test_prefect:latest
+  image_pull_policy: null
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: false
+  volumes: []
+  stream_output: true
+  memswap_limit: null
+  mem_limit: null
+  privileged: false
+  _block_document_id: d065f67e-7816-4ddb-9671-7eddf1dce2e8
+  _block_document_name: prod
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage: null
+path: /opt/prefect/flows
+entrypoint: flows/sample_deployment.py:log_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    flow_name:
+      title: flow_name
+      position: 0
+      type: string
+  required:
+  - flow_name
+  definitions: null
+timestamp: '2023-03-10T15:34:38.765928+00:00'

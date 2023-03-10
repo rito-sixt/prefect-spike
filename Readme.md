@@ -21,3 +21,8 @@
 5. Instantiate an agent for execution - `prefect agent start -q 'test'`
 
 More about Prefect deployments here - https://docs.prefect.io/tutorials/deployments/
+
+# Docker Container as a deployment
+1. Create docker container block by - `python blocks/docker_block.py`. This creates a infra block on Prefect
+2. Build the docker image locally - `docker build -t test_prefect .`
+3. 
