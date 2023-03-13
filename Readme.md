@@ -14,7 +14,8 @@
 
 1. Implement a flow. Example - `sample_deployment_flow`
 2. Build the config yaml
-   - `prefect deployment build sample_deployment.py:log_flow -n log-simple -q test`. This generates `log_flow-deployment.yaml`
+    - `prefect deployment build sample_deployment.py:log_flow -n log-simple -q test`. This
+      generates `log_flow-deployment.yaml`
 3. Apply the deployment - `prefect deployment apply log_flow-deployment.yaml`
 4. Trigger a run - `prefect deployment run 'log-flow/log-simple'` ( This keeps the
    execution in queue, until agent of type `test` is triggered )
@@ -23,6 +24,5 @@
 More about Prefect deployments here - https://docs.prefect.io/tutorials/deployments/
 
 # Docker Container as a deployment
-1. Create docker container block by - `python blocks/docker_block.py`. This creates a infra block on Prefect
-2. Build the docker image locally - `docker build -t test_prefect .`
-3. 
+
+`sh deploy.bash`
